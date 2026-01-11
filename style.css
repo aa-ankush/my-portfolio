@@ -29,7 +29,7 @@ body.light-mode {
     --pill-bg: #f4f4f5;
     --border-color: #e4e4e7;
     --btn-hover: #f4f4f5;
-    
+    --dot-color: white;
 }
 
 * {
@@ -48,25 +48,73 @@ body {
     background-size: 30px 30px;
 }
 
-/*  2. HEADER & NAV */
+  /* 2. HEADER & NAV  */
 header {
-    display: flex;
+     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    position: fixed; /* Sits on top of the banner image */
+    position: fixed; 
     top: 0;
     width: 100%;
-    z-index: 10;
+    z-index: 10; 
+    transition: background-color 0.4s ease, padding 0.4s ease;
 }
 
 /* --- Scrolled Header State (Dark & Blurry) --- */
-header.scrolled {
-    background: rgba(9, 9, 11, 0.85); /* Semi-transparent dark bg */
-    backdrop-filter: blur(10px);      /* Glass blur effect */
-    padding: 15px 40px;               /* Optional: Shrink height slightly */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle bottom border */
+ header.scrolled {
+    background: rgba(9, 9, 11, 0.85);
+    backdrop-filter: blur(10px);      
+    padding: 15px 40px;               
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+} 
+
+.header-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+/* Hide Hamburger by default (Desktop) */
+#menu-toggle {
+  display: none;
+  font-size: 1.2rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+
+/* Small & Medium Mobile (up to 768px) */
+@media (max-width: 768px) {
+  #menu-toggle {
+    display: block; /* Show hamburger */
+  }
+
+  nav {
+    display: none; /* Hide links initially */
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #111;
+    padding: 20px 0;
+    border-bottom: 1px solid #222;
+  }
+
+  /* When menu is toggled open */
+  nav.active {
+    display: flex;
+  }
+
+  nav a {
+    margin: 15px 5%;
+    font-size: 1.1rem;
+  }
 }
 
 .logo img {
@@ -451,7 +499,7 @@ skill---section */
     flex-direction: column;
     gap: 1rem;
     padding-block: 96px 32px;
-    padding-inline: 20px 20px;
+    /* padding-inline: 20px 20px; */
 }
 
 .skill-content .section-head {
@@ -839,14 +887,14 @@ skill---section */
 
 .contact-section{
   padding-block: 96px 32px;
-  max-width: 800px;
+  max-width: 850px;
   margin-inline: auto;
   padding-inline: 20px;
 }
 
 .contact-grid {
   display: flex;
-  gap: 40px;
+  gap: 100px;
   align-items: center;
   justify-content: center; 
 }
@@ -858,6 +906,8 @@ skill---section */
 .contact-left {
     flex: 1;
     max-width: 300px;
+    border: 1px solid;
+    border-radius: 12px;
 }
 
 .contact-image-wrapper {
@@ -1099,3 +1149,93 @@ skill---section */
     visibility: visible;
     transform: translateY(0);
 }
+
+
+
+
+.skills-accordion-section {
+    max-width: 100%; /* Limits width like the screenshot */
+    /* margin: 50px auto; */
+    color: #fff;
+ padding: 0 20px; 
+}
+
+.accordion-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Container for the tags */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: space-between;
+  /* background-color: #0a0a0a; 
+  padding: 20px; */
+}
+
+/* The individual tag */
+.skill-card {
+  background: #161616;
+  border: 1px solid #2e2e2e;
+  border-radius: 8px;
+  padding: 10px 15px;
+  min-width: 140px;
+  position: relative;
+  overflow: hidden; /* Clips the progress bar to the border radius */
+}
+
+/* Layout for icon, name, and percentage */
+.skill-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  color: white;
+  font-family: sans-serif;
+  gap: 1rem;
+}
+
+.percentage {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* The Progress Bar Background */
+.progress-line {
+  height: 4px;
+  width: 100%;
+  background: #2e2e2e;
+  border-radius: 2px;
+}
+
+/* The actual progress color */
+.progress-line span {
+  display: block;
+  height: 100%;
+  background: #00d2ff; /* Change this to match your accent color */
+  border-radius: 2px;
+  transition: width 1s ease-in-out;
+}
+
+
+
+
+
+
