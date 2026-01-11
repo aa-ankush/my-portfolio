@@ -12,7 +12,7 @@
     --dot-color: #393737;
     --accent-pink: #ec4899;
     --accent-blue: #3b82f6;
-    --btn-light: #e5e5e5;   
+    --btn-light: #e5e5e5;
     --text-white: #ffffff;
     }    /* Font Settings */
 
@@ -54,21 +54,21 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 40px;
-    position: fixed; 
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 10; 
+    z-index: 10;
     transition: background-color 0.4s ease, padding 0.4s ease;
 }
 
 /* --- Scrolled Header State (Dark & Blurry) --- */
  header.scrolled {
     background: rgba(9, 9, 11, 0.85);
-    backdrop-filter: blur(10px);      
-    padding: 15px 40px;               
+    backdrop-filter: blur(10px);
+    padding: 15px 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-} 
+}
 
 .header-actions {
   display: flex;
@@ -95,20 +95,25 @@ header {
   }
 
   nav {
-    display: none; /* Hide links initially */
+    display: none !important;  /* Hide links initially */
     flex-direction: column;
     position: absolute;
+    align-items: center;
     top: 100%;
     left: 0;
     width: 100%;
     background: #111;
     padding: 20px 0;
     border-bottom: 1px solid #222;
+    height: 100vh;
+  }
+  header {
+    background-color: #111;
   }
 
   /* When menu is toggled open */
   nav.active {
-    display: flex;
+    display: flex !important;
   }
 
   nav a {
@@ -129,7 +134,7 @@ nav {
     gap: 32px;
 }
 
-/* From Uiverse.io by zjssun */ 
+/* From Uiverse.io by zjssun */
 .con-button {
   position: relative;
   padding: 8px 12px;
@@ -489,7 +494,7 @@ a:hover {
   animation: twinkle 6s infinite linear reverse;
 }
 
-/* 
+/*
 skill---section */
 
 .skill-section {
@@ -549,7 +554,7 @@ skill---section */
     .section-title {
         font-size: 1.5rem;
     }
-    
+
     .skill-tag {
         padding: 8px 12px;
         font-size: 0.9rem;
@@ -627,7 +632,7 @@ skill---section */
 /* On hover, scale up and darken the image so the button pops */
 .card-image:hover img {
     transform: scale(1.08);
-    opacity: 0.4; 
+    opacity: 0.4;
 }
 
 /* --- NEW: Visit Site Overlay Button Styles --- */
@@ -638,21 +643,21 @@ skill---section */
     /* Center it and start slightly smaller for animation effect */
     transform: translate(-50%, -50%) scale(0.9);
     z-index: 10; /* Ensure it sits on top of image and gradients */
-    
+
     background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent dark pillow */
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: #fff;
-    
+
     padding: 12px 24px;
     border-radius: 50px; /* nice rounded pill shape */
     text-decoration: none;
     font-weight: 600;
     font-size: 0.95rem;
-    
+
     display: flex;
     align-items: center;
     gap: 10px;
-    
+
     /* Hidden initially */
     opacity: 0;
     visibility: hidden;
@@ -708,7 +713,7 @@ skill---section */
 }
 
 .header-links a {
-     color:var(--text-primary); 
+     color:var(--text-primary);
     font-size: 1.1rem;
     transition: color 0.2s;
 }
@@ -880,7 +885,7 @@ skill---section */
 
 /* --- Reusing Variables for Consistency --- */
 :root {
-   
+
     --text-muted: #a1a1aa;
    /* The light button color */
 }
@@ -896,7 +901,7 @@ skill---section */
   display: flex;
   gap: 100px;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
 }
 
 /* Section Layout */
@@ -1021,11 +1026,11 @@ skill---section */
     .contact-container {
         flex-direction: column;
     }
-    
+
     .contact-left {
         max-width: 100%;
     }
-    
+
     .form-row {
         flex-direction: column;
         gap: 20px;
@@ -1099,7 +1104,7 @@ skill---section */
     .side-stripe {
         width: 15px; /* Thinner stripes on mobile */
     }
-    
+
     .footer-socials {
         gap: 20px;
         flex-direction: column; /* Stack icons vertically on small screens */
@@ -1116,11 +1121,11 @@ skill---section */
     right: 30px;
     width: 50px;
     height: 50px;
-    
+
     /* Theme Colors */
-    background: var(--accent-blue, #3b82f6); 
+    background: var(--accent-blue, #3b82f6);
     color: #fff;
-    
+
     border-radius: 50%; /* Makes it circular */
     display: flex;
     align-items: center;
@@ -1129,7 +1134,7 @@ skill---section */
     font-size: 1.2rem;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     z-index: 1000; /* Ensures it sits on top of everything */
-    
+
     /* Hidden by default */
     opacity: 0;
     visibility: hidden;
@@ -1157,7 +1162,7 @@ skill---section */
     max-width: 100%; /* Limits width like the screenshot */
     /* margin: 50px auto; */
     color: #fff;
- padding: 0 20px; 
+ padding: 0 20px;
 }
 
 .accordion-container {
@@ -1186,7 +1191,7 @@ skill---section */
   flex-wrap: wrap;
   gap: 24px;
   justify-content: space-between;
-  /* background-color: #0a0a0a; 
+  /* background-color: #0a0a0a;
   padding: 20px; */
 }
 
