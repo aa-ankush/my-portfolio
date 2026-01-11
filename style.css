@@ -109,6 +109,7 @@ header {
   }
   header {
     background-color: #111;
+    width: 100%;
   }
 
   /* When menu is toggled open */
