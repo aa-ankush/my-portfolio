@@ -85,3 +85,32 @@ document.querySelectorAll('#nav-menu a').forEach(link => {
     
   });
 });
+
+
+
+ const contactForm = document.getElementById('contact-form');
+ const submitBtn = document.getElementById('submit-btn');
+
+ contactForm.addEventListener('submit', function(event) {
+     event.preventDefault();
+
+     // Change button text to show progress
+     submitBtn.innerText = "Sending...";
+     submitBtn.disabled = true;
+
+    
+     emailjs.sendForm('service_k6whjhn', 'template_6xinvcg',this )
+         .then(() => {
+             alert('Message Sent Successfully!');
+             contactForm.reset(); // Clear the form
+             submitBtn.innerText = "Submit";
+             submitBtn.disabled = false;
+         }, (error) => {
+             alert('Failed to send message. Please try again.');
+             console.log('FAILED...', error);
+             submitBtn.innerText = "Submit";
+             submitBtn.disabled = false;
+         });
+ });
+
+

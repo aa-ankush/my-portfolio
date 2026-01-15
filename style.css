@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+
+* {
+    box-sizing: border-box;
+}
+
+
 :root {
     --bg-color: #111111;
     --bg-light-color:#1a1a1a;
@@ -17,8 +23,14 @@
     }    /* Font Settings */
 
 
-html {
+html,body {
   scroll-behavior: smooth;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Stops the side-scrolling */
+  position: relative;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
 }
 
 /* LIGHT MODE COLORS */
@@ -32,18 +44,12 @@ body.light-mode {
     --dot-color: white;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 body {
     background-color: var(--bg-color);
     color: var(--text-primary);
-    font-family: "poppins", Arial, Helvetica, sans-serif;
     transition: background-color 0.3s, color 0.3s;
-    overflow-x: hidden;
     background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
     background-size: 30px 30px;
 }
@@ -106,6 +112,7 @@ header {
     padding: 20px 0;
     border-bottom: 1px solid #222;
     height: 100vh;
+    overflow-x: hidden;
   }
   header {
     background-color: #111;
@@ -134,6 +141,25 @@ nav {
     display: flex;
     gap: 32px;
 }
+
+.profile-pic-wrapper {
+    text-align: center;
+}
+
+
+
+
+@media (max-width: 400px) {
+    header {
+        padding: 15px 20px; /* Reduce padding on tiny screens */
+    }
+    
+    .logo a {
+        font-size: 1.1rem;
+    }
+}
+
+
 
 /* From Uiverse.io by zjssun */
 .con-button {
@@ -403,6 +429,43 @@ a:hover {
     }
     .hero-content h1 {
         font-size: 2rem;
+    }
+}
+
+/* 1. Add global overflow protection */
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Stops the side-scrolling */
+    position: relative;
+}
+
+/* 2. Fix the Socials causing overflow on small screens */
+@media (max-width: 768px) {
+    .socials {
+        position: static; /* Remove absolute positioning */
+        flex-direction: row; /* Stack icons horizontally on mobile */
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+        right: auto;
+    }
+    
+    .action-row {
+        flex-direction: column;
+        align-items: center; /* Center buttons and socials */
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem; /* Smaller text for small mobiles */
+        text-align: center;
+    }
+    
+    .bio {
+        text-align: center;
     }
 }
 
@@ -780,6 +843,18 @@ skill---section */
     font-size: 0.8rem;
 }
 
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .project-card {
+        max-width: 100%; /* Take full width on mobile */
+    }
+}
+
 /* ecducation section */
 
 .education-section {
@@ -944,16 +1019,6 @@ skill---section */
     transition: transform 0.2s ease, color 0.2s ease;
 }
 
-/* .social-row a:hover {
-    color: var(--text-muted);
-    transform: translateY(-3px);
-} */
-
-/* --- Right Column: Form --- */
-/* .contact-right {
-    width: 400px;
-} */
-
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -1022,22 +1087,26 @@ skill---section */
     opacity: 0.9;
 }
 
-/* Responsive: Stack on mobile */
+/* Contact Section Responsiveness */
 @media (max-width: 768px) {
-    .contact-container {
-        flex-direction: column;
+    .contact-grid {
+        flex-direction: column; /* Stack image/links and form */
+        gap: 40px;
     }
 
     .contact-left {
         max-width: 100%;
+        width: 100%;
+    }
+    
+    .contact-right {
+        width: 100%;
     }
 
     .form-row {
-        flex-direction: column;
-        gap: 20px;
+        flex-direction: column; /* Name and Email stack vertically */
     }
 }
-
 /* footer section */
 
 /* --- Footer Container --- */
@@ -1172,20 +1241,6 @@ skill---section */
     gap: 20px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Container for the tags */
 .skills-container {
   display: flex;
@@ -1204,7 +1259,8 @@ skill---section */
   padding: 10px 15px;
   min-width: 140px;
   position: relative;
-  overflow: hidden; /* Clips the progress bar to the border radius */
+  overflow: hidden;
+  width: 45%; /* Clips the progress bar to the border radius */
 }
 
 /* Layout for icon, name, and percentage */
@@ -1241,7 +1297,13 @@ skill---section */
 }
 
 
+@media (max-width: 425px) {
+    .skill-card {
+        width: 100%;
+    }
+}
 
-
-
-
+.submit-btn:disabled {
+    background-color: var(--text-secondary); /* Grey out when sending */
+    cursor: not-allowed;
+}

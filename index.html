@@ -5,11 +5,21 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Ankush - Full Stack Developer</title>
       <link rel="stylesheet" href="style.css">
+       <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "jVzA29SEHm-QrszL4",
+      });
+   })();
+</script>
       <script defer src="script.js"></script>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
       <link rel="icon" href="669ad813acda9dbf495f2f611e97deec.jpg">
       <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
-   </head>
+     
    <body>
        <header id="scrolled_" class="scrolled">
          <div class="logo">
@@ -236,10 +246,26 @@
             <h2 class="section-title">
                <span class="red-arrow"><i class="fa-solid fa-location-arrow fa-rotate-by" style="color: #74C0FC; --fa-rotate-angle: 50deg;"></i></span> Education
             </h2>
+            
+             
+               
+
             <div class="timeline">
+
                <div class="timeline-item">
                   <div class="timeline-dot"></div>
-                  <div class="timeline-date">2021 - 2024</div>
+                  <div class="timeline-date">2024 - 2025</div>
+                  <div class="timeline-content">
+                     <h3>Advanced Certification in Graphics & Web Development</h3>
+                     <h4>Arena Animation</h4>
+                     <p>>Mastered visual design principles, UI/UX workflows, and front-end development. Specialized in creating responsive web layouts and high-fidelity graphic assets.</p>
+                     <span class="grade-pill">Professional Certification</span>
+                  </div>
+               </div>
+
+               <div class="timeline-item">
+                  <div class="timeline-dot"></div>
+                  <div class="timeline-date">2021 - 2023</div>
                   <div class="timeline-content">
                      <h3>Bachelor of Commerce</h3>
                      <h4>school of open learning</h4>
@@ -320,22 +346,22 @@
     </a>
                </div>
                <div class="contact-right">
-                  <form class="contact-form">
+                  <form class="contact-form" id="contact-form">
                      <div class="form-row">
                         <div class="form-group">
                            <label for="name">Name</label>
-                           <input type="text" id="name" placeholder="John Doe">
+                           <input type="text" id="name" name="name" placeholder="John Doe">
                         </div>
                         <div class="form-group">
                            <label for="email">Email</label>
-                           <input type="email" id="email" placeholder="john@example.com">
+                           <input type="email" id="email" name="email" placeholder="john@example.com">
                         </div>
                      </div>
                      <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea id="message" rows="6" placeholder="Tell me about your project..."></textarea>
+                        <textarea id="message" rows="6" name="message" placeholder="Tell me about your project..."></textarea>
                      </div>
-                     <button type="submit" class="submit-btn">
+                     <button type="submit" class="submit-btn" id="submit-btn" >
                      Submit
                      </button>
                   </form>
