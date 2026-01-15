@@ -26,11 +26,18 @@
 html,body {
   scroll-behavior: smooth;
   width: 100%;
+<<<<<<< HEAD
   margin: 0;
   padding: 0;
   overflow-x: hidden; /* Stops the side-scrolling */
   position: relative;
   font-family: "poppins", Arial, Helvetica, sans-serif;
+=======
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Stops the side-scrolling */
+    position: relative;
+>>>>>>> 18b9055ac305d3acf357b66d94d37be0ba4445e1
 }
 
 /* LIGHT MODE COLORS */
@@ -52,6 +59,11 @@ body {
     transition: background-color 0.3s, color 0.3s;
     background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
     background-size: 30px 30px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; 
+    position: relative;
 }
 
   /* 2. HEADER & NAV  */
@@ -1303,7 +1315,83 @@ skill---section */
     }
 }
 
+<<<<<<< HEAD
 .submit-btn:disabled {
     background-color: var(--text-secondary); /* Grey out when sending */
     cursor: not-allowed;
+=======
+
+
+@media (max-width: 768px) {
+    .socials {
+        position: static; /* Remove absolute positioning */
+        flex-direction: row; /* Stack icons horizontally on mobile */
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+        right: auto;
+    }
+    
+    .action-row {
+        flex-direction: column;
+        align-items: center; /* Center buttons and socials */
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem; /* Smaller text for small mobiles */
+        text-align: center;
+    }
+    
+    .bio {
+        text-align: center;
+    }
+}
+
+
+/* Project Section Responsiveness */
+@media (max-width: 768px) {
+    .project-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .project-card {
+        max-width: 100%; /* Take full width on mobile */
+    }
+}
+
+/* Contact Section Responsiveness */
+@media (max-width: 768px) {
+    .contact-grid {
+        flex-direction: column; /* Stack image/links and form */
+        gap: 40px;
+    }
+
+    .contact-left {
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .contact-right {
+        width: 100%;
+    }
+
+    .form-row {
+        flex-direction: column; /* Name and Email stack vertically */
+    }
+}
+
+
+@media (max-width: 400px) {
+    header {
+        padding: 15px 20px; /* Reduce padding on tiny screens */
+    }
+    
+    .logo a {
+        font-size: 1.1rem;
+    }
+>>>>>>> 18b9055ac305d3acf357b66d94d37be0ba4445e1
 }
