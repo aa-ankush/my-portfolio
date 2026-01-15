@@ -24,20 +24,15 @@
 
 
 html,body {
-  scroll-behavior: smooth;
-  width: 100%;
-<<<<<<< HEAD
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden; /* Stops the side-scrolling */
-  position: relative;
-  font-family: "poppins", Arial, Helvetica, sans-serif;
-=======
+    scroll-behavior: smooth;
+    width: 100%;
+    overflow-x: hidden; /* Stops the side-scrolling */
+    position: relative;
+    font-family: "poppins", Arial, Helvetica, sans-serif;
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Stops the side-scrolling */
     position: relative;
->>>>>>> 18b9055ac305d3acf357b66d94d37be0ba4445e1
 }
 
 /* LIGHT MODE COLORS */
@@ -60,10 +55,6 @@ body {
     background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
     background-size: 30px 30px;
     width: 100%;
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; 
-    position: relative;
 }
 
   /* 2. HEADER & NAV  */
@@ -154,9 +145,7 @@ nav {
     gap: 32px;
 }
 
-.profile-pic-wrapper {
-    text-align: center;
-}
+
 
 
 
@@ -1315,11 +1304,6 @@ skill---section */
     }
 }
 
-<<<<<<< HEAD
-.submit-btn:disabled {
-    background-color: var(--text-secondary); /* Grey out when sending */
-    cursor: not-allowed;
-=======
 
 
 @media (max-width: 768px) {
@@ -1345,6 +1329,9 @@ skill---section */
     }
     
     .bio {
+        text-align: center;
+    }
+    .profile-pic-wrapper {
         text-align: center;
     }
 }
@@ -1393,5 +1380,4 @@ skill---section */
     .logo a {
         font-size: 1.1rem;
     }
->>>>>>> 18b9055ac305d3acf357b66d94d37be0ba4445e1
 }
