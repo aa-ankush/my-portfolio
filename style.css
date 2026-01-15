@@ -888,7 +888,7 @@ skill---section */
     height: 12px;
     border-radius: 50%;
     background: linear-gradient(45deg, var(--accent-pink), var(--accent-blue));
-    box-shadow: 0 0 10px rgba(236, 72, 153, 0.5); /* Glowing effect */
+    box-shadow: 0 0 10px rgba(236, 72, 153, 0.5); 
 }
 
 /* Date Text */
@@ -1330,6 +1330,7 @@ skill---section */
     
     .bio {
         text-align: center;
+        font-size: .70rem;
     }
     .profile-pic-wrapper {
         text-align: center;
@@ -1381,3 +1382,17 @@ skill---section */
         font-size: 1.1rem;
     }
 }
+
+
+
+/* When the header has the .scrolled class, reduce the gap between links */
+header.down {
+    padding-inline: 75px; /* Reduced from 32px to 16px to bring them closer */
+    transition: gap 3s all; /* Ensures the movement is smooth */
+}
+
+/* Optional: Slightly reduce the logo size on scroll too */
+/* header.scrolled .logo a {
+    font-size: 0.9rem;
+    transition: font-size 0.4s ease;
+} */

@@ -5,25 +5,24 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Ankush - Full Stack Developer</title>
       <link rel="stylesheet" href="style.css">
-       <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
-      emailjs.init({
-        publicKey: "jVzA29SEHm-QrszL4",
-      });
-   })();
-</script>
+      <script type="text/javascript"
+         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      <script type="text/javascript">
+         (function(){
+            emailjs.init({
+              publicKey: "jVzA29SEHm-QrszL4",
+            });
+         })();
+      </script>
+      <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
       <script defer src="script.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
       <link rel="icon" href="669ad813acda9dbf495f2f611e97deec.jpg">
-      <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.2.0/css/line.css">
-     
+      <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
    <body>
-       <header id="scrolled_" class="scrolled">
+      <header id="scrolled_" class="scrolled">
          <div class="logo">
-            <a href="#scrolled_">ANKUSH</a>
+            <a href="#hero-banner">ANKUSH</a>
          </div>
          <nav id="nav-menu">
             <a href="#project_section">Projects</a>
@@ -36,14 +35,12 @@
             <i class="fa-regular fa-moon"></i>
             </button>
             <button class="icon-btn menu-toggle" id="menu-toggle">
-      <i class="fa-solid fa-bars"></i>
-    </button>
+            <i class="fa-solid fa-bars"></i>
+            </button>
          </div>
-      </header> 
-
-   
+      </header>
       <!-- Hero-banner ----------------------------------------------------------------------------------------------------------->
-      <div class="hero-banner">
+      <div class="hero-banner" id="hero-banner">
          <div class="overlay-gradient"></div>
          <div class="stars"></div>
          <div class="shooting-star"></div>
@@ -72,7 +69,7 @@
                   <a href="/assets/New Text Document.pdf" type="button" download="My_CV" class="btn con-button">
                   </i>Get Resume
                   </a>
-                  <a type="button" class=" btn con-button">Contact Me
+                  <a type="button" href="#contact_section" class=" btn con-button">Contact Me
                   </a>
                </div>
                <div class="socials">
@@ -85,51 +82,47 @@
          </div>
       </main>
       <!-- Skill-section --------------------------------------------------------------------------------------------------------------------------------->
-      <div class="skill-section" id="skill_section">
+      <div data-aos="fade-right"  data-aos-duration="2000" class="skill-section" id="skill_section">
          <div class="skill-contain">
             <section class="skills-accordion-section">
                <h2 class="section-title">
-<span class="red-arrow"><i class="fa-solid fa-location-arrow fa-rotate-by" style="color: #74C0FC; --fa-rotate-angle: 50deg;"></i></span> Technical Skills
-                   <!-- <span class="red-arrow">&gt;</span> Technical Skills -->
+                  <span class="red-arrow"><i class="fa-solid fa-location-arrow fa-rotate-by" style="color: #74C0FC; --fa-rotate-angle: 50deg;"></i></span> Technical Skills
+                  <!-- <span class="red-arrow">&gt;</span> Technical Skills -->
                </h2>
                <div class="accordion-container">
                   <div class="skills-container">
                      <div class="skill-card">
                         <div class="skill-info">
-                            <i class="fa-brands fa-html5 fa-fade" style="color:#f54927"></i>
+                           <i class="fa-brands fa-html5 fa-fade" style="color:#f54927"></i>
                            <span>Html</span>
                            <span class="percentage">90%</span>
                         </div>
                         <div class="progress-line"><span style="width: 90%;"></span></div>
                      </div>
-
                      <div class="skill-card">
                         <div class="skill-info">
-                            <i class="fa-brands fa-css3 fa-fade" style="color: #2196f3;"></i>
+                           <i class="fa-brands fa-css3 fa-fade" style="color: #2196f3;"></i>
                            <span>Css</span>
                            <span class="percentage">90%</span>
                         </div>
                         <div class="progress-line"><span style="width: 90%;"></span></div>
                      </div>
-
                      <div class="skill-card">
                         <div class="skill-info">
-                            <i class="fa-brands fa-js fa-fade" style="color: #efd81d;"></i>
+                           <i class="fa-brands fa-js fa-fade" style="color: #efd81d;"></i>
                            <span>JavaScript</span>
                            <span class="percentage">90%</span>
                         </div>
                         <div class="progress-line"><span style="width: 90%;"></span></div>
                      </div>
-
                      <div class="skill-card">
                         <div class="skill-info">
-                            <i class="fa-brands fa-php fa-fade" style="color: #7377ad;"></i>
+                           <i class="fa-brands fa-php fa-fade" style="color: #7377ad;"></i>
                            <span>php</span>
                            <span class="percentage">90%</span>
                         </div>
                         <div class="progress-line"><span style="width: 90%;"></span></div>
                      </div>
-
                      <div class="skill-card">
                         <div class="skill-info">
                            <i class="fa-solid fa-database fa-fade" style="color: #2e76ce;"></i>
@@ -138,7 +131,6 @@
                         </div>
                         <div class="progress-line"><span style="width: 90%;"></span></div>
                      </div>
-
                      <div class="skill-card">
                         <div class="skill-info">
                            <i class="fa-brands fa-react fa-fade" style="color: #61DAFB;"></i>
@@ -147,7 +139,6 @@
                         </div>
                         <div class="progress-line"><span style="width: 90%;"></span></div>
                      </div>
-
                      <div class="skill-card">
                         <div class="skill-info">
                            <i class="fa-brands fa-figma fa-fade"></i>
@@ -156,16 +147,14 @@
                         </div>
                         <div class="progress-line"><span style="width: 90%;"></span></div>
                      </div>
-
-                      <div class="skill-card">
+                     <div class="skill-card">
                         <div class="skill-info">
-                            <i class="fa-brands fa-node-js fa-fade" style="color: #4caf50;"></i>
+                           <i class="fa-brands fa-node-js fa-fade" style="color: #4caf50;"></i>
                            <span>Node js</span>
                            <span class="percentage">90%</span>
                         </div>
                         <div class="progress-line"><span style="width: 90%;"></span></div>
                      </div>
-                     
                   </div>
                </div>
          </div>
@@ -173,7 +162,7 @@
       </div>
       </div>
       <!-- Project-section ----------------------------------------------------------------------------------------------------------------------->
-      <div class="project-section" id="project_section">
+      <div data-aos="zoom-in"  data-aos-duration="3000" class="project-section" id="project_section">
          <div class="project-contain">
             <div class="section-head">
                <h2><span class="red-arrow"><i class="fa-solid fa-location-arrow fa-rotate-by" style="color: #74C0FC; --fa-rotate-angle: 50deg;"></i></span> Project</h2>
@@ -228,7 +217,7 @@
                         A dynamic platform allowing users to create, customize, and play interactive quizzes with real-time scoring and user authentication.
                      </p>
                      <div class="tech-stack">
-                       <span class="tag"><i class="fa-brands fa-js fa-fade" style="color: #efd81d;"></i> JavaScript</span>
+                        <span class="tag"><i class="fa-brands fa-js fa-fade" style="color: #efd81d;"></i> JavaScript</span>
                         <span class="tag"><i class="fa-brands fa-css3 fa-fade" style="color: #2196f3;"></i> Css</span>
                         <span class="tag"><i class="fa-brands fa-html5 fa-fade" style="color:#f54927"></i> Html</span>
                      </div>
@@ -241,17 +230,13 @@
          </div>
       </div>
       <!-- Educaton-section ----------------------------------------------------------------------------------------------------------------------->
-      <div class="education-section" id="education_section">
+      <div  data-aos="fade-up"
+     data-aos-duration="3000" class="education-section" id="education_section">
          <section class="education-contain">
             <h2 class="section-title">
                <span class="red-arrow"><i class="fa-solid fa-location-arrow fa-rotate-by" style="color: #74C0FC; --fa-rotate-angle: 50deg;"></i></span> Education
             </h2>
-            
-             
-               
-
             <div class="timeline">
-
                <div class="timeline-item">
                   <div class="timeline-dot"></div>
                   <div class="timeline-date">2024 - 2025</div>
@@ -262,7 +247,6 @@
                      <span class="grade-pill">Professional Certification</span>
                   </div>
                </div>
-
                <div class="timeline-item">
                   <div class="timeline-dot"></div>
                   <div class="timeline-date">2021 - 2023</div>
@@ -297,53 +281,48 @@
          </section>
       </div>
       <!-- contact-section ------------------------------------------------------------------------------------------------------------->
-      <div class="contact-section" id="contact_section">
+      <div data-aos="fade-left"  data-aos-duration="3000" class="contact-section" id="contact_section">
          <div class="contact-contain">
             <h2 class="section-title">
                <span class="red-arrow"><i class="fa-solid fa-location-arrow fa-rotate-by" style="color: #74C0FC; --fa-rotate-angle: 50deg;"></i></span> Contact
             </h2>
             <div class="contact-grid">
                <div class="contact-left">
-                  
                   <a href="mailto:singhankush75875@gmail.com" class="contact-card">
-      <div class="card-content">
-        <span class="contact-icon">✉</span>
-        <div class="text-group">
-          
-          <span class="value">singhankush75875@gmail.com</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="tel:+1234567890" class="contact-card">
-      <div class="card-content">
-        <i class="fa-solid fa-phone"></i>
-        <div class="text-group">
-          <!-- <span class="label">Phone:</span> -->
-          <span class="value">+91-9873313354</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://github.com/dashboard" target="_blank" class="contact-card">
-      <div class="card-content">
-        <i class="fa-brands fa-github"></i>
-        <div class="text-group">
-          <!-- <span class="label">GitHub:</span>  -->
-          <span class="value">https://github.com/dashboard</span>
-        </div>
-      </div>
-    </a>
-
-    <a href="https://in.linkedin.com/" target="_blank" class="contact-card">
-      <div class="card-content">
-        <i class="fa-brands fa-linkedin"></i>
-        <div class="text-group">
-          <!-- <span class="label">GitHub:</span>  -->
-          <span class="value">https://in.linkedin.com/</span>
-        </div>
-      </div>
-    </a>
+                     <div class="card-content">
+                        <span class="contact-icon">✉</span>
+                        <div class="text-group">
+                           <span class="value">singhankush75875@gmail.com</span>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="tel:+1234567890" class="contact-card">
+                     <div class="card-content">
+                        <i class="fa-solid fa-phone"></i>
+                        <div class="text-group">
+                           <!-- <span class="label">Phone:</span> -->
+                           <span class="value">+91-9873313354</span>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="https://github.com/dashboard" target="_blank" class="contact-card">
+                     <div class="card-content">
+                        <i class="fa-brands fa-github"></i>
+                        <div class="text-group">
+                           <!-- <span class="label">GitHub:</span>  -->
+                           <span class="value">https://github.com/dashboard</span>
+                        </div>
+                     </div>
+                  </a>
+                  <a href="https://in.linkedin.com/" target="_blank" class="contact-card">
+                     <div class="card-content">
+                        <i class="fa-brands fa-linkedin"></i>
+                        <div class="text-group">
+                           <!-- <span class="label">GitHub:</span>  -->
+                           <span class="value">https://in.linkedin.com/</span>
+                        </div>
+                     </div>
+                  </a>
                </div>
                <div class="contact-right">
                   <form class="contact-form" id="contact-form">
@@ -392,5 +371,9 @@
       <a href="#" id="floatingBackToTop" class="floating-btn">
       <i class="fa-solid fa-arrow-up"></i>
       </a>
+
+      <script>
+        AOS.init();
+      </script>
    </body>
 </html>

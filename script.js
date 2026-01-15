@@ -114,3 +114,10 @@ document.querySelectorAll('#nav-menu a').forEach(link => {
  });
 
 
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        header.classList.add('down'); // This triggers the CSS above
+    } else {
+        header.classList.remove('down');
+    }
+});
