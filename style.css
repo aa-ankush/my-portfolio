@@ -297,7 +297,6 @@ a:hover {
 .hero-banner {
     width: 100%;
     height: 300px;
-    /* background-image: url('https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');  */
     background: linear-gradient(to bottom, #0b0b2b, #1b2735 70%, #090a0f);
     overflow: hidden;
     background-size: cover;
@@ -322,8 +321,6 @@ a:hover {
     padding: 0 20px;
     position: relative;
     margin-top:-120px;
-    /* background-image: radial-gradient(var(--dot-color) 1px, transparent 1px);
-    background-size: 30px 30px; */
 }
 
 /* Profile Picture Overlapping */
@@ -976,7 +973,7 @@ skill---section */
 
 .contact-grid {
   display: flex;
-  gap: 100px;
+  gap: 69px;
   align-items: center;
   justify-content: center;
 }
@@ -1231,7 +1228,6 @@ skill---section */
 
 .skills-accordion-section {
     max-width: 100%; /* Limits width like the screenshot */
-    /* margin: 50px auto; */
     color: #fff;
  padding: 0 20px;
 }
@@ -1248,8 +1244,7 @@ skill---section */
   flex-wrap: wrap;
   gap: 24px;
   justify-content: space-between;
-  /* background-color: #0a0a0a;
-  padding: 20px; */
+
 }
 
 /* The individual tag */
@@ -1374,9 +1369,9 @@ skill---section */
 
 
 @media (max-width: 400px) {
-    header {
-        padding: 15px 20px; /* Reduce padding on tiny screens */
-    }
+    /* header {
+        padding: 15px 20px;
+    } */
     
     .logo a {
         font-size: 1.1rem;
@@ -1391,8 +1386,59 @@ header.down {
     transition: gap 3s all; /* Ensures the movement is smooth */
 }
 
-/* Optional: Slightly reduce the logo size on scroll too */
-/* header.scrolled .logo a {
-    font-size: 0.9rem;
-    transition: font-size 0.4s ease;
-} */
+
+
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border: none; /* Remove that white border-box for a cleaner look */
+}
+
+.contact-pill {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background: var(--bg-light-color);
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 320px;
+}
+
+#contact-pill:hover {
+
+    border-color: var(--accent-blue);
+    text-shadow: none;
+}
+
+
+
+.pill-icon {
+    font-size: 1.5rem;
+    color: var(--accent-blue);
+    width: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.pill-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.pill-text .label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.pill-text .value {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
