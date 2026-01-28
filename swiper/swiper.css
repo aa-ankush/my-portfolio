@@ -1,0 +1,24 @@
+/* Change .project-grid to a block for Swiper compatibility */
+.project-swiper {
+    width: 100%;
+    padding: 20px 0 60px; /* Space for dots */
+    position: relative;
+    overflow: hidden;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+/* Customize Arrows to match your Accent Blue */
+.swiper-button-next, 
+.swiper-button-prev {
+    color: var(--accent-blue) !important;
+    transform: scale(0.7); /* Smaller arrows for clean look */
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--accent-blue) !important;
+}
